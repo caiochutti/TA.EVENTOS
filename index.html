@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA.EVENTOS | Carrinhos Gourmet</title>
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">TA.<span>EVENTOS</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Nossos Carrinhos</a></li>
+                <li><a href="#contato">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section id="home" class="hero">
+    <div class="slideshow">
+        <div class="slides" style="background-image: url('assets/img/picoleskimo.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/waffle.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/acai-2.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/acai.jpeg');"></div>
+    </div>
+    
+    <div class="hero-text">
+        <h1>Transforme seu evento com nossos Carrinhos Gourmet</h1>
+        <p>Picolés decorados, Waffles, Açaí e muito mais para tornar sua festa inesquecível.</p>
+        <a href="#contato" class="btn">Solicitar Orçamento</a>
+    </div>
+</section>
+
+    <section id="servicos" class="container">
+        <h2 class="title">Nossas Delícias</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/picoleskimo.jpeg');"></div>
+                <h3>Picolés Skimó</h3>
+                <p>Personalizados com caldas e confeitos coloridos.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/waffle.jpeg');"></div>
+                <h3>Waffles Gourmet</h3>
+                <p>Crocantes, com morangos frescos e chocolate premium.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/acai.jpeg');"></div>
+                <h3>Estação de Açaí</h3>
+                <p>Montado na hora com acompanhamentos variados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <h2>Peça seu Orçamento</h2>
+            <form action="https://formspree.io/f/seu-codigo-aqui" method="POST">
+                <input type="text" id="contato" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <input type="text" name="whatsapp" placeholder="WhatsApp">
+                <input type="date" id="selectedDate" name="data" required>
+                <select name="servico">
+                    <option value="picolés">Carrinho de Picolés</option>
+                    <option value="waffle">Carrinho de Waffle</option>
+                    <option value="acai">Carrinho de Açaí</option>
+                    <option value="completo">Evento Completo</option>
+                </select>
+                <textarea name="mensagem" placeholder="Conte-nos sobre seu evento (Data, local e convidados)"></textarea>
+                <button type="submit" class="btn">Enviar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TA.EVENTOS - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
