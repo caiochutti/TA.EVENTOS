@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // for now we just log the data to the console
             console.log('Form data ready to send:', data);
 
-            // TODO: change URL to your actual API endpoint when it's ready
-            fetch('/api/orcamento', {
+            // POST to json-server (run `npm run server` in a separate terminal)
+            // json-server uses `server.json` and exposes `/schedules` for CRUD.
+            fetch('http://localhost:3001/schedules', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

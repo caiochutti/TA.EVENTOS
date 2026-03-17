@@ -5,7 +5,7 @@ import { hoursLoad } from "./hours-load.js"
 
 function initForm() {
     const form = document.querySelector("form")
-    const clientName = document.getElementById("contato")
+    const clientName = document.getElementById("nome")
     const selectedDate = document.getElementById("selectedDate")
     const emailInput = document.querySelector('input[name="email"]')
     const whatsappInput = document.querySelector('input[name="whatsapp"]')
