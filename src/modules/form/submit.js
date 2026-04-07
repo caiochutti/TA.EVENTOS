@@ -36,9 +36,10 @@ function initForm() {
             const whatsapp = (whatsappInput?.value || "").trim()
             const servico = servicoSelect?.value || ""
             const mensagem = (mensagemTextarea?.value || "").trim()
+            const data = selectedDate.value || inputToday
 
             const hours = 0 // TODO: implement hoursLoad properly
-            const when = dayjs(selectedDate.value).add(hours, "hour")
+            const when = dayjs(data).add(hours, "hour")
             const id = new Date().getTime()
 
             await scheduleNew({
@@ -47,6 +48,7 @@ function initForm() {
                 whatsapp,
                 servico,
                 mensagem,
+                data,
                 when: when.toISOString(),
                 id,
             })

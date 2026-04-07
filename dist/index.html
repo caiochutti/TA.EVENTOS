@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TA.EVENTOS | Carrinhos Gourmet</title>
     
+    <!-- Favicon (prevents 404 request to /favicon.ico) -->
+    <link rel="icon" href="assets/img/waffle.jpeg" type="image/jpeg">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <script defer src="main.js"></script></head>
@@ -24,10 +26,15 @@
 
   <section id="home" class="hero">
     <div class="slideshow">
-        <div class="slides" style="background-image: url('img/picole skimo.jpeg');"></div>
-        <div class="slides" style="background-image: url('img/waffle.jpeg');"></div>
-        <div class="slides" style="background-image: url('img/acai 2.jpeg');"></div>
-        <div class="slides" style="background-image: url('img/Acai.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/picoleskimo.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/waffle.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/acai-2.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/acai.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/casquinha2.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/fundue-2.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/churros.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/fini-3.jpeg');"></div>
+        <div class="slides" style="background-image: url('assets/img/sorvete.jpeg');"></div>
     </div>
     
     <div class="hero-text">
@@ -41,19 +48,44 @@
         <h2 class="title">Nossas Delícias</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-img" style="background-image: url('img/picole skimo.jpeg');"></div>
+                <div class="card-img" style="background-image: url('assets/img/picoleskimo.jpeg');"></div>
                 <h3>Picolés Skimó</h3>
                 <p>Personalizados com caldas e confeitos coloridos.</p>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('img/waffle.jpeg');"></div>
+                <div class="card-img" style="background-image: url('assets/img/waffle.jpeg');"></div>
                 <h3>Waffles Gourmet</h3>
                 <p>Crocantes, com morangos frescos e chocolate premium.</p>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('img/Acai.jpeg');"></div>
+                <div class="card-img" style="background-image: url('assets/img/acai.jpeg');"></div>
                 <h3>Estação de Açaí</h3>
                 <p>Montado na hora com acompanhamentos variados.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/casquinha2.jpeg');"></div>
+                <h3>Estação da Casquinha</h3>
+                <p>Casquinhas super crocantes com sorvete cremoso e acompanhamentos variados para você personalizar como quiser.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/fundue-2.jpeg');"></div>
+                <h3>Fundue</h3>
+                <p>Fondue é montada na hora, permitindo que cada convidado escolha seus acompanhamentos favoritos.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/churros.jpeg');"></div>
+                <h3>Churros com Sorvete</h3>
+                <p>Nosso churros crocante, polvilhado com açúcar e canela, servido com uma generosa bola de sorvete cremoso.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/fini-3.jpeg');"></div>
+                <h3>Fini</h3>
+                <p>Nossa estação conta com uma seleção incrível de balas de gelatina, marshmallows e guloseimas variadas.</p>
+            </div>
+             <div class="card">
+                <div class="card-img" style="background-image: url('assets/img/sorvete.jpeg');"></div>
+                <h3>Sorvetes</h3>
+                <p>Estação completa de sorvetes com coberturas exclusivas e montagem na hora.</p>
             </div>
         </div>
     </section>
@@ -62,13 +94,19 @@
         <div class="container">
             <h2>Peça seu Orçamento</h2>
             <form action="https://formspree.io/f/seu-codigo-aqui" method="POST">
-                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
                 <input type="email" name="email" placeholder="Seu E-mail" required>
                 <input type="text" name="whatsapp" placeholder="WhatsApp">
+                <input type="date" id="selectedDate" name="data" required>
                 <select name="servico">
                     <option value="picolés">Carrinho de Picolés</option>
                     <option value="waffle">Carrinho de Waffle</option>
                     <option value="acai">Carrinho de Açaí</option>
+                    <option value="casquinha">Carrinho de Casquinha</option>
+                    <option value="fundue">Carrinho de Fundue</option>
+                    <option value="churros">Carrinho de Churros</option>
+                    <option value="fini">Carrinho de Fini</option>
+                    <option value="sorvete">Carrinho de Sorvete</option>
                     <option value="completo">Evento Completo</option>
                 </select>
                 <textarea name="mensagem" placeholder="Conte-nos sobre seu evento (Data, local e convidados)"></textarea>
@@ -78,9 +116,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 TA.EVENTOS - Todos os direitos reservados.</p>
+        <p>&copy; 2026 TA.EVENTOS - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
