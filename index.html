@@ -47,42 +47,42 @@
     <section id="servicos" class="container">
         <h2 class="title">Nossas Delícias</h2>
         <div class="grid">
-            <div class="card">
+            <div class="card product-card" data-product="picolés">
                 <div class="card-img" style="background-image: url('assets/img/picoleskimo.jpeg');"></div>
                 <h3>Picolés Skimó</h3>
                 <p>Personalizados com caldas e confeitos coloridos.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="waffle">
                 <div class="card-img" style="background-image: url('assets/img/waffle.jpeg');"></div>
                 <h3>Waffles Gourmet</h3>
                 <p>Crocantes, com morangos frescos e chocolate premium.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="acai">
                 <div class="card-img" style="background-image: url('assets/img/acai.jpeg');"></div>
                 <h3>Estação de Açaí</h3>
                 <p>Montado na hora com acompanhamentos variados.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="casquinha">
                 <div class="card-img" style="background-image: url('assets/img/casquinha2.jpeg');"></div>
                 <h3>Estação da Casquinha</h3>
                 <p>Casquinhas super crocantes com sorvete cremoso e acompanhamentos variados para você personalizar como quiser.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="fundue">
                 <div class="card-img" style="background-image: url('assets/img/fundue-2.jpeg');"></div>
                 <h3>Fundue</h3>
                 <p>Fondue é montada na hora, permitindo que cada convidado escolha seus acompanhamentos favoritos.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="churros">
                 <div class="card-img" style="background-image: url('assets/img/churros.jpeg');"></div>
                 <h3>Churros com Sorvete</h3>
                 <p>Nosso churros crocante, polvilhado com açúcar e canela, servido com uma generosa bola de sorvete cremoso.</p>
             </div>
-            <div class="card">
+            <div class="card product-card" data-product="fini">
                 <div class="card-img" style="background-image: url('assets/img/fini-3.jpeg');"></div>
                 <h3>Fini</h3>
                 <p>Nossa estação conta com uma seleção incrível de balas de gelatina, marshmallows e guloseimas variadas.</p>
             </div>
-             <div class="card">
+             <div class="card product-card" data-product="sorvete">
                 <div class="card-img" style="background-image: url('assets/img/sorvete.jpeg');"></div>
                 <h3>Sorvetes</h3>
                 <p>Estação completa de sorvetes com coberturas exclusivas e montagem na hora.</p>
@@ -98,6 +98,8 @@
                 <input type="email" name="email" placeholder="Seu E-mail" required>
                 <input type="text" name="whatsapp" placeholder="WhatsApp">
                 <input type="date" id="selectedDate" name="data" required>
+                <input type="text" name="local" placeholder="Local da Festa (Cidade/Bairro)" required>
+                <input type="number" name="convidados" placeholder="Qtd. de Convidados" min="1" required>
                 <select name="servico">
                     <option value="picolés">Carrinho de Picolés</option>
                     <option value="waffle">Carrinho de Waffle</option>
@@ -109,7 +111,7 @@
                     <option value="sorvete">Carrinho de Sorvete</option>
                     <option value="completo">Evento Completo</option>
                 </select>
-                <textarea name="mensagem" placeholder="Conte-nos sobre seu evento (Data, local e convidados)"></textarea>
+               <textarea name="mensagem" placeholder="Detalhes adicionais (opcional)"></textarea>
                 <button type="submit" class="btn">Enviar Pedido</button>
             </form>
         </div>

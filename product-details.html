@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - TA.EVENTOS</title>
+    <link rel="icon" href="assets/img/waffle.jpeg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+    <style>
+        .product-details-container {
+            max-width: 1100px;
+            margin: 60px auto 40px;
+            padding: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .product-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .product-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* GALERIA DE IMAGENS */
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+
+        .gallery-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+
+        .thumbnail {
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail:hover,
+        .thumbnail.active {
+            border-color: #e74c3c;
+        }
+
+        /* VIDEOEOS */
+        .videos-section {
+            margin-bottom: 50px;
+        }
+
+        .videos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #e74c3c;
+            padding: 12px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .no-content {
+            text-align: center;
+            padding: 40px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .product-header {
+                grid-template-columns: 1fr;
+            }
+
+            .product-title {
+                font-size: 24px;
+            }
+
+            .main-image {
+                height: 250px;
+            }
+
+            .cta-section {
+                padding: 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TA.<span>EVENTOS</span></div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#servicos">Nossos Carrinhos</a></li>
+                <li><a href="index.html#contato">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-details-container">
+        <a href="index.html#servicos" class="back-btn">← Voltar aos Produtos</a>
+
+        <div class="product-header">
+            <div>
+                <h1 class="product-title" id="productName"></h1>
+                <p class="product-description" id="productDescription"></p>
+                <div class="cta-section">
+                    <h2>Interessado?</h2>
+                    <p>Solicite um orçamento agora mesmo!</p>
+                    <a href="index.html#contato" class="cta-btn">Fazer Orçamento</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Imagens -->
+        <div class="gallery-section" id="gallerySection" style="display: none;">
+            <h2 class="gallery-title">Galeria de Fotos</h2>
+            <div class="main-image" id="mainImage"></div>
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+
+        <!-- Seção de Vídeos -->
+        <div class="videos-section" id="videosSection" style="display: none;">
+            <h2 class="gallery-title">Vídeos de Demonstração</h2>
+            <div class="videos-container" id="videosContainer"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TA.EVENTOS - Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="module">
+        import { products } from './src/data/products.js';
+
+        // Pegar o parâmetro 'product' da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productKey = urlParams.get('product');
+
+        if (!productKey || !products[productKey]) {
+            document.querySelector('.product-details-container').innerHTML = 
+                '<div class="no-content">Produto não encontrado. <a href="index.html#servicos">Voltar aos produtos</a></div>';
+        } else {
+            const product = products[productKey];
+
+            // Preencher informações do produto
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productDescription').textContent = product.description;
+
+            // Montar galeria de imagens
+            if (product.images && product.images.length > 0) {
+                const gallerySection = document.getElementById('gallerySection');
+                const mainImage = document.getElementById('mainImage');
+                const thumbnails = document.getElementById('thumbnails');
+
+                gallerySection.style.display = 'block';
+
+                // Imagem principal
+                mainImage.style.backgroundImage = `url('${product.images[0]}')`;
+
+                // Miniaturas
+                product.images.forEach((image, index) => {
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                    thumbnail.style.backgroundImage = `url('${image}')`;
+                    
+                    thumbnail.addEventListener('click', () => {
+                        document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                        thumbnail.classList.add('active');
+                        mainImage.style.backgroundImage = `url('${image}')`;
+                    });
+
+                    thumbnails.appendChild(thumbnail);
+                });
+            }
+
+            // Montar seção de vídeos
+            if (product.videos && product.videos.length > 0) {
+                const videosSection = document.getElementById('videosSection');
+                const videosContainer = document.getElementById('videosContainer');
+
+                videosSection.style.display = 'block';
+
+                product.videos.forEach(video => {
+                    const videoItem = document.createElement('div');
+                    videoItem.className = 'video-item';
+                    videoItem.innerHTML = `<iframe src="${video}" allowfullscreen></iframe>`;
+                    videosContainer.appendChild(videoItem);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
